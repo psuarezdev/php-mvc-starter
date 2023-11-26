@@ -1,0 +1,13 @@
+# Disable directory browsing
+Options All -Indexes
+
+<IfModule mod_rewrite.c>
+  # Enable mod_rewrite
+  RewriteEngine on
+  ErrorDocument 404 http://localhost/404.php
+
+  RewriteCond %{SCRIPT_FILENAME} !-d
+  RewriteCond %{SCRIPT_FILENAME} !-f
+
+  RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+</IfModule>
