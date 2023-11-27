@@ -1,2 +1,4 @@
 # php-mvc-starter
-Custom PHP MVC starter project -> https://localhost/controller/method
+Custom PHP MVC starter project
+
+Friendly URLs -> https://<domain>/<controller>/<method>
